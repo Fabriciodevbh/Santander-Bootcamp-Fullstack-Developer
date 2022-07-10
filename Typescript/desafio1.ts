@@ -1,12 +1,30 @@
-// Como podemos rodar isso em um arquivo .ts sem causar erros? 
-
-let employee = {
-    code: 10,
-    name: 'Jhon'
+// Resposta 1
+const funcionario = {
+    codigo: 10,
+    nome: 'Davi'
 };
 
-// or let empolyee: {code: number, name: string} = {
+// Resposta 2
+const funcionario2: {codigo: number, nome: string} = {
+    codigo: 10,
+    nome: 'davi'
+}
 
-employee.code = 10;
-employee.name = "John";
+// Respostas 3 e 4
+interface Funcionario {  // interfaces https://blog.logrocket.com/types-vs-interfaces-in-typescript/
+    codigo: number,
+    nome: string
+};
+
+const funcionarioObj = {} as Funcionario;
+funcionarioObj.codigo = 10;
+funcionarioObj.nome = 'Davi';
+
+const funcionarioObj2: Funcionario = {
+    codigo: 10,
+    nome: 'Davi'
+}
+
+//finalizado
+
 
